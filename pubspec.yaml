@@ -1,0 +1,48 @@
+﻿name: gymradar
+description: GymRadar - Encuentra tu gym ideal cerca de ti en Perú.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  provider: ^6.1.2
+
+  # Navigation
+  go_router: ^14.6.2
+
+  # UI / Fonts
+  google_fonts: ^6.2.1
+  # Montserrat via google_fonts — no asset needed
+  flutter_keyboard_visibility: ^6.0.0
+
+  # Utils
+  url_launcher: ^6.3.1
+  collection: ^1.18.0
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/images/logo_icon.png"
+  adaptive_icon_background: "#121212"
+  adaptive_icon_foreground: "assets/images/logo_icon.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/fonts/
+    - assets/jsons/
+    - assets/icons/
