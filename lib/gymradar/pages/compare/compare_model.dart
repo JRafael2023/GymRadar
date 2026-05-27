@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'search_widget.dart' show SearchWidget;
+import 'compare_widget.dart' show CompareWidget;
 import 'package:flutter/material.dart';
 
-class SearchModel extends FlutterFlowModel<SearchWidget> {
+class CompareModel extends FlutterFlowModel<CompareWidget> {
   TextEditingController? searchController;
   FocusNode? searchFocusNode;
   String query = '';

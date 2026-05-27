@@ -4,6 +4,11 @@ import 'package:go_router/go_router.dart';
 
 import '/gymradar/auth/login/login_widget.dart';
 import '/gymradar/pages/home/home_widget.dart';
+import '/gymradar/pages/search/search_widget.dart';
+import '/gymradar/pages/gym_detail/gym_detail_widget.dart';
+import '/gymradar/pages/compare/compare_widget.dart';
+import '/gymradar/pages/form_compare/form_compare_widget.dart';
+import '/gymradar/pages/profile/profile_widget.dart';
 import 'app_state.dart';
 
 void main() async {
@@ -52,6 +57,32 @@ class _MyAppState extends State<MyApp> {
         path: HomeWidget.routePath,
         builder: (context, state) => const HomeWidget(),
       ),
+      GoRoute(
+        name: SearchWidget.routeName,
+        path: SearchWidget.routePath,
+        builder: (context, state) => const SearchWidget(),
+      ),
+      GoRoute(
+        name: GymDetailWidget.routeName,
+        path: GymDetailWidget.routePath,
+        builder: (context, state) =>
+            GymDetailWidget(gymId: state.pathParameters['id'] ?? ''),
+      ),
+      GoRoute(
+        name: CompareWidget.routeName,
+        path: CompareWidget.routePath,
+        builder: (context, state) => const CompareWidget(),
+      ),
+      GoRoute(
+        name: FormCompareWidget.routeName,
+        path: FormCompareWidget.routePath,
+        builder: (context, state) => const FormCompareWidget(),
+      ),
+      GoRoute(
+        name: ProfileWidget.routeName,
+        path: ProfileWidget.routePath,
+        builder: (context, state) => const ProfileWidget(),
+      ),
     ],
   );
 
@@ -76,4 +107,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
