@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>GMSApiKey</key>
+	<string>$(MAPS_API_KEY)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -45,5 +47,11 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<!-- Location permissions -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>GymRadar usa tu ubicación para mostrarte los gimnasios más cercanos a ti.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>GymRadar usa tu ubicación para mostrarte los gimnasios más cercanos a ti.</string>
+	<!-- Google Maps iOS API Key — reemplaza YOUR_GOOGLE_MAPS_API_KEY en AppDelegate.swift -->
 </dict>
 </plist>

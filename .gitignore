@@ -1,18 +1,7 @@
-# ── IA / Claude / Anthropic ──────────────────────────────────────
-.claude/
-.claude
-CLAUDE.md
-.anthropic/
-*.anthropic
-claude_context/
-ai_context/
-.ai/
-.cursorrules
-.cursorignore
-.copilot/
-.github/copilot*
-*.prompt.md
-*.system-prompt
+# ── Secrets / API keys (no versionar) ───────────────────────────
+lib/gymradar/secrets.dart
+ios/Flutter/Secrets.xcconfig
+android/key.properties
 
 # ── Miscellaneous
 *.class

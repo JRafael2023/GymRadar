@@ -279,7 +279,9 @@ class _GymDetailWidgetState extends State<GymDetailWidget> {
                       child: _StatCard(
                         icon: Icons.attach_money,
                         iconColor: cs.primary,
-                        value: 'S/. ${gym['priceMin']}',
+                        value: (gym['priceMin'] == 0)
+                            ? 'Consultar'
+                            : 'S/. ${gym['priceMin']}',
                         label: 'desde / mes',
                       ),
                     ),

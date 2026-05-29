@@ -80,8 +80,8 @@ class FFAppState extends ChangeNotifier {
       'imageUrl': 'https://picsum.photos/seed/gym1/400/220',
       'tags': ['Pesas', 'Cardio', 'Spinning'],
       'phone': '51999888777',
-      'lat': -12.1191,
-      'lng': -77.0292,
+      'lat': -12.1490,
+      'lng': -77.0103,
     },
     {
       'id': '2',
@@ -97,8 +97,8 @@ class FFAppState extends ChangeNotifier {
       'imageUrl': 'https://picsum.photos/seed/gym2/400/220',
       'tags': ['24 horas', 'Funcional', 'Yoga'],
       'phone': '51998777666',
-      'lat': -12.0966,
-      'lng': -77.0353,
+      'lat': -12.1432,
+      'lng': -76.9929,
     },
     {
       'id': '3',
@@ -114,8 +114,8 @@ class FFAppState extends ChangeNotifier {
       'imageUrl': 'https://picsum.photos/seed/gym3/400/220',
       'tags': ['Piscina', 'Sauna', 'Crossfit'],
       'phone': '51997666555',
-      'lat': -12.1307,
-      'lng': -77.0034,
+      'lat': -12.1702,
+      'lng': -77.0248,
     },
     {
       'id': '4',
@@ -131,8 +131,8 @@ class FFAppState extends ChangeNotifier {
       'imageUrl': 'https://picsum.photos/seed/gym5/400/220',
       'tags': ['Económico', 'Boxeo', 'Pesas'],
       'phone': '51996555444',
-      'lat': -12.1451,
-      'lng': -77.0215,
+      'lat': -12.1198,
+      'lng': -77.0181,
     },
     {
       'id': '5',
@@ -148,8 +148,8 @@ class FFAppState extends ChangeNotifier {
       'imageUrl': 'https://picsum.photos/seed/gym4/400/220',
       'tags': ['Económico', 'Pesas', 'Cardio'],
       'phone': '51995444333',
-      'lat': -12.0839,
-      'lng': -76.9324,
+      'lat': -12.1553,
+      'lng': -76.9679,
     },
     {
       'id': '6',
@@ -165,11 +165,21 @@ class FFAppState extends ChangeNotifier {
       'imageUrl': 'https://picsum.photos/seed/gym6/400/220',
       'tags': ['Premium', 'Pilates', 'Funcional'],
       'phone': '51994333222',
-      'lat': -12.1050,
-      'lng': -76.9980,
+      'lat': -12.0901,
+      'lng': -77.0399,
     },
   ];
   List<Map<String, dynamic>> get allGyms => _allGyms;
+
+  /// Reemplaza el catálogo con gimnasios reales (Google Places).
+  /// Conserva el demo si [gyms] llega vacío.
+  void setAllGyms(List<Map<String, dynamic>> gyms) {
+    if (gyms.isEmpty) return;
+    _allGyms
+      ..clear()
+      ..addAll(gyms);
+    notifyListeners();
+  }
 
   Map<String, dynamic>? gymById(String id) {
     try {
